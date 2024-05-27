@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish Ishita</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes textGlow {
+            0%, 100% { text-shadow: 0 0 8px #ff69b4, 0 0 16px #ff69b4, 0 0 24px #ff69b4; }
+            50% { text-shadow: 0 0 4px #ff69b4, 0 0 8px #ff69b4, 0 0 12px #ff69b4; }
+        }
+
+        @keyframes balloonFloat {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+        }
+
+        h1 {
+            color: #ff69b4;
+            font-size: 3em;
+            animation: textGlow 2s infinite;
+        }
+
+        p {
+            color: #333333;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .balloon {
+            position: absolute;
+            top: -50px;
+            width: 60px;
+            height: 80px;
+            background-color: #ff69b4;
+            border-radius: 50% 50% 50% 50%;
+            animation: balloonFloat 4s ease-in-out infinite;
+        }
+
+        .balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background: #ff69b4;
+        }
+
+        .balloon:nth-child(1) {
+            left: 10%;
+            animation-duration: 5s;
+        }
+
+        .balloon:nth-child(2) {
+            left: 30%;
+            animation-duration: 6s;
+        }
+
+        .balloon:nth-child(3) {
+            left: 50%;
+            animation-duration: 4s;
+        }
+
+        .balloon:nth-child(4) {
+            left: 70%;
+            animation-duration: 5s;
+        }
+
+        .balloon:nth-child(5) {
+            left: 90%;
+            animation-duration: 6s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, Ishita! 🎉</h1>
+        <p>Wishing you a day filled with love, joy, and wonderful moments. May all your dreams come true!</p>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+</body>
+</html>
